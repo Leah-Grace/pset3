@@ -35,14 +35,17 @@ int duration(string fraction)
 // Calculates frequency (in Hz) of a note
 int frequency(string note)
 {
-    char theNote = note[0];
+    char letter = note[0];
     char octave;
     char accidental;
     char sharp = "#";
     char flat = "b";
-    int powerFactor = ;
+    int accidentalFactor = 0;
+    float frequency;
+    float semitones
+    float powerFacotr
 
-    if (strlen(note) == 3)
+    if (strlen(note) == 3)  //parse notes for sharps and flats
         {
             octave = note[2];
             accidental = note[1]
@@ -50,10 +53,12 @@ int frequency(string note)
             if (strcmp(accidental, sharp) == 0)
             {
                 printf("Add for the sharp");
+                accidentalFactor++;
             }
             else if (strcmp(accidental, flat) == 0)
             {
                 printf("subtract for the flat");
+                accidentalfactor--;
             }
 
         }
@@ -62,14 +67,26 @@ int frequency(string note)
             octave = note[1];
         }
 
-    switch (atoi(theNote))
+    if (octave == 4)
     {
+
+
+
+        switch (atoi(letter))
+        {
         case "A":
+            frequency = 440;
+            eprintf("%fHZ", frequency);
             return 440;
             break;
+
         case "B":
-            return
+        semitones = ((letter - "A")*(-1));
+        powerFactor = (semitones + accidentalFactor);
+        frequency = round(440 + (pow(2, (powerFactor/12))));
+            return frequency;
             break;
+
         case "C":
             return
             break;
@@ -85,7 +102,60 @@ int frequency(string note)
         case "G":
             return
             break;
+        }
     }
+    else if (octave == 5)
+    {
+         case "A":
+            frequency = 440;
+            eprintf("%fHZ", frequency);
+            return frequency;
+            break;
+
+        case "B":
+        semitones = (letter - "A");
+        powerFactor = (semitones + accidentalFactor);
+        frequency = round(440 + (pow(2, (powerFactor/12))));
+            return frequency;
+            break;
+        case "C":
+        semitones = (letter - "A");
+        powerFactor = (semitones + accidentalFactor);
+        frequency = round(440 + (pow(2, (powerFactor/12))));
+            return frequency;
+            break;
+        case "D":
+        semitones = (letter - "A");
+        powerFactor = (semitones + accidentalFactor);
+        frequency = round(440 + (pow(2, (powerFactor/12))));
+            return frequency;
+            break;
+        case "E":
+        semitones = (letter - "A");
+        powerFactor = (semitones + accidentalFactor);
+        frequency = round(440 + (pow(2, (powerFactor/12))));
+            return frequency;
+            break;
+        case "F":
+        semitones = (letter - "A");
+        powerFactor = (semitones + accidentalFactor);
+        frequency = round(440 + (pow(2, (powerFactor/12))));
+            return frequency;
+            break;
+        case "G":
+        semitones = (letter - "A");
+        powerFactor = (semitones + accidentalFactor);
+        frequency = round(440 + (pow(2, (powerFactor/12))));
+            return frequency;
+            return
+            break;
+
+    }
+
+
+
+
+
 
     //parse the string into OCTAVE
     //parse string into NOTE
