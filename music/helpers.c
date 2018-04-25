@@ -29,7 +29,6 @@ int duration(string fraction)
         default:
             return 0;
     }
-
 }
 
 // Calculates frequency (in Hz) of a note
