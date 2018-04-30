@@ -1,3 +1,10 @@
+// Good use of comments throughout your program making it easy to follow along
+// Good use of variable names
+// style50 did not produce any errors
+// passed all check50 tests
+// Minor thing, but I would consider deleting the printf comments inside the frequency function
+
+
 // Helper functions for music
 #include <stdio.h>
 #include <cs50.h>
